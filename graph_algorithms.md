@@ -31,7 +31,7 @@ To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BF
 
 #### Complexity ####
 - Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the color[] array, and the Queue used in BFS, input space = $O(V+E)$]
+- Space Complexity = $O(V)$ [For the color[] array, and the queue used in BFS, input space = $O(V+E)$]
 
 
 ### 2. Finding number of connected components for a graph $G=(V, E)$ ###
@@ -47,4 +47,22 @@ The number of connected components can be computed from an undirected graph usin
 
 #### Complexity ####
 - Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the visited[] array, and the Queue used in BFS, input space = $O(V+E)$]
+- Space Complexity = $O(V)$ [For the visited[] array, and the queue used in BFS, input space = $O(V+E)$]
+
+
+
+## *Depth First Search (DFS)* ##
+
+## Applications of DFS ##
+### 1. Finding Topological Order / Topological Sort ###
+In a DAG, a topological order or topological sort is a sequence of all the vertices such that for every edge $u → v$, $u$ appears before $v$ in the sequence. It is a linear ordering of vertices such that for every directed edge $u \rightarrow v$, vertex $u$ comes before vertex $v$ in the ordering.
+
+#### Algorithm ####
+- Maintain a *visited[]* array to track visited nodes
+- Perform DFS from each unvisited node
+- After visiting all neighbors of a node, push it onto a *stack*
+- After all DFS calls are complete, *pop* from the *stack* to get the topological order
+
+#### Complexity ####
+- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
+- Space Complexity = $O(V)$ [For the visited[] array, and the stack used in DFS, input space = $O(V+E)$]
