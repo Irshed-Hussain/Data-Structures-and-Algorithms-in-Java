@@ -13,6 +13,24 @@
 
 
 ## Breadth First Search (BFS) ##
+```java
+public void bfs(int s) {
+        boolean[] visited = new boolean[V];
+        Queue<Integer> Q = new LinkedList<>();
+        visited[s] = true;
+        Q.add(s);
+        while (!Q.isEmpty()) {
+            int u = Q.remove();
+            System.out.print(u + " ");
+            for (int v : L.get(u)) {
+                if (!visited[v]) {
+                    visited[v] = true; 
+                    Q.add(v); 
+                }
+            }
+        }
+    }
+```
 
 ### Applications of BFS ###
 ### *1. Checking bipartiteness of a graph $G=(V, E)$* ###
