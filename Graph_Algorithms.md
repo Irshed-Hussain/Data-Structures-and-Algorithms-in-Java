@@ -21,10 +21,10 @@ To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BF
 - A graph is **bipartite** if and only if it contains **no cycles of odd length**.
 
 #### Algorithm ####
-Initialize a *color[]* array for all nodes with *-1* (unvisited)
-For every *unvisited* node, run BFS algorithm:
-  Assign a color *0* or *1* to the start node
-  For each neighbor:
-    If *unvisited*, assign the opposite color and continue
-    If *visited* and has the same color, the graph is not bipartite
-If no conflict is found, he graph is *bipartite*
+-Initialize a *color[]* array for all nodes with *-1* (unvisited)
+-For every *unvisited* node, run BFS algorithm:
+  -Assign a color *0* or *1* to the start node
+  -For each neighbor:
+    -If *unvisited*, assign the opposite color and continue
+    -If *visited* and has the same color, the graph is not bipartite
+-If no conflict is found, he graph is *bipartite*
