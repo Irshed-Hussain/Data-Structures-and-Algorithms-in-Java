@@ -54,7 +54,7 @@ To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BF
 - Space Complexity = $O(V)$ [For the color[] array, and the queue used in BFS, input space = $O(V+E)$]
 
 
-### *2. Finding number of connected components for a graph $G=(V, E)$* ###
+### *2. Finding number of connected components for a graph G=(V, E)* ###
 The number of connected components can be computed from an undirected graph using BFS algorithm. A connected component in a graph G=(V, E) is a maximal set of vertices such that every pair of vertices in the set is connected by a path.
 
 #### Algorithm ####
