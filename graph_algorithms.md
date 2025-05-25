@@ -33,7 +33,7 @@ public void bfs(int s) {
 ```
 
 ### Applications of BFS ###
-### *1. Checking bipartiteness of a graph $G=(V, E)$* ###
+### *1. Checking bipartiteness of a graph G=(V, E)* ###
 To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BFS algorithm where we try to color the graph $G$ using two colors such that no two adjacent nodes share the same color. A graph is **bipartite** if we can split its vertices into two sets such that no edge connects nodes of the same set. 
 
 #### Properties of a bipartite graph ####
