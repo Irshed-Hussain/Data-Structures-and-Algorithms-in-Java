@@ -1,4 +1,4 @@
-/* Breadth First Search using Adjacency List */
+/* BFS algorithm implementation where graph G=(V,E) is represented as an adjacency list using Java Collection ArrayList */
 
 import java.util.ArrayList;
 import java.util.LinkedList;
