@@ -30,16 +30,17 @@ To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BF
 - If no conflict is found, he graph is *bipartite*
 
 #### Complexity ####
-- Time Complexity = $O(V+E)$ [For visiting each vertex, and edge once]
+- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
 - Space Complexity = $O(V)$ [For the color array, and the Queue used in BFS]
 
 
 ### 2. Finding number of connected components for a graph $G=(V, E)$ ###
+The number of connected components can be computed from an undirected graph using BFS algorithm. A connected component in a graph G=(V, E) is a maximal set of vertices such that every pair of vertices in the set is connected by a path.
 
 #### Algorithm ####
-- Initialize a visited[] array of size V (number of vertices), all set to false
-- For each unvisited node i:
+- Initialize a *visited[]* array for all the nodes and set all to false
+- For each *unvisited* node i:
   - Start a BFS from i
-  - Mark all reachable nodes as visited
-  - Collect the visited nodes into a component list
+  - Mark all reachable nodes as *visited*
+  - Collect the *visited* nodes into a component list
 - Repeat until all nodes are visited.
