@@ -1,4 +1,4 @@
-/* Breadth First Search using Adjacency Matrix */
+/* BFS algorithm implementation where graph G=(V,E) is represented as an adjacency matrix */
 
 import java.util.LinkedList;
 import java.util.Queue;
