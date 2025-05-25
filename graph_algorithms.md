@@ -12,7 +12,7 @@
 
 
 
-## Depth First Search (DFS) ##
+## Breadth First Search (BFS) ##
 
 ### Applications of BFS ###
 ### *1. Checking bipartiteness of a graph $G=(V, E)$* ###
@@ -54,6 +54,24 @@ The number of connected components can be computed from an undirected graph usin
 
 
 ## Depth First Search (DFS) ##
+```java
+public void dfs(int s) {
+        boolean[] visited = new boolean[V];
+        Stack<Integer> S = new Stack<>();
+        S.push(s);
+        while (!S.isEmpty()) {
+            int u = S.pop();
+            if (!visited[u]) {
+                System.out.print(u + " ");
+                visited[u] = true;
+            }
+            for (int v : L.get(u)) {
+                if (!visited[v])
+                    S.push(v);
+            }
+        }
+    }
+```
 
 ### Applications of DFS ###
 ### *1. Finding Topological Order / Topological Sort* ###
