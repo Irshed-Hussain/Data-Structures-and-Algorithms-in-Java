@@ -5,10 +5,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class BFS_Adjlist {
+public class BFS_Adjlist_Arraylist {
     int V; 
     List<List<Integer>> L;  
-    BFS_Adjlist(int v) {
+    BFS_Adjlist_Arraylist(int v) {
         this.V = v;
         L = new ArrayList<>(v);
         for (int i = 0; i < v; i++)
@@ -38,7 +38,7 @@ public class BFS_Adjlist {
     }
 
     public static void main(String[] args) {
-        BFS_Adjlist G = new BFS_Adjlist(8); 
+        BFS_Adjlist_Arraylist G = new BFS_Adjlist_Arraylist(8); 
         G.add_edge(0, 1);
         G.add_edge(0, 2);
         G.add_edge(1, 2);
