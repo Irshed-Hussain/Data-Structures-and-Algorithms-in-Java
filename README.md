@@ -25,6 +25,6 @@ To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BF
 2. For every *unvisited* node, run BFS algorithm:
 3.   Assign a color *0* or *1* to the start node
 4.   For each neighbor:
-5.     If *unvisited*, assign the opposite color and continue.
-6.     If *visited* and has the same color, the graph is *not bipartite*.
-7. If no conflict is found, he graph is *bipartite*.
+5.     If unvisited, assign the opposite color and continue
+6.     If visited and has the same color, the graph is not bipartite
+7. If no conflict is found, he graph is *bipartite*
