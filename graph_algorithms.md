@@ -51,7 +51,7 @@ To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BF
 
 #### Complexity ####
 - Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the color[] array, and the queue used in BFS, input space = $O(V+E)$]
+- Space Complexity = $O(V)$ [For the color[] array, and the queue used in BFS, input space (adjacency list) = $O(V+E)$]
 
 
 ### *2. Finding number of connected components for a graph G=(V, E)* ###
@@ -67,7 +67,7 @@ The number of connected components can be computed from an undirected graph usin
 
 #### Complexity ####
 - Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the visited[] array, and the queue used in BFS, input space = $O(V+E)$]
+- Space Complexity = $O(V)$ [For the visited[] array, and the queue used in BFS, input space (adjacency list) = $O(V+E)$]
 
 
 
@@ -103,7 +103,7 @@ In a DAG, a topological order or topological sort is a sequence of all the verti
 
 #### Complexity ####
 - Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the visited[] array, and the stack used in DFS, input space = $O(V+E)$]
+- Space Complexity = $O(V)$ [For the visited[] array, and the stack used in DFS, input space (adjacency list) = $O(V+E)$]
 
 ### *2. Finding Articulation Points* ###
 Finding *articulation points* (or *cut vertices*) in a graph using DFS can be effectively accomplished with **Tarjan’s algorithm**. An articulation point is a vertex that, when removed, increases the number of connected components in the graph.
@@ -114,4 +114,6 @@ Finding *articulation points* (or *cut vertices*) in a graph using DFS can be ef
   - If the root of the DFS tree has two or more children
   - If any other vertex v has a child u such that no vertex reachable from u can connect back to one of v's ancestors
 
-
+#### Complexity ####
+- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
+- Space Complexity = $O(V)$ [For the arrays, and the stack used in DFS, input space (adjacency list) = $O(V+E)$]
