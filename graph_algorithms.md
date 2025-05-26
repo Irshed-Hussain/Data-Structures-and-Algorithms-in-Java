@@ -105,13 +105,13 @@ In a DAG, a topological order or topological sort is a sequence of all the verti
 - Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
 - Space Complexity = $O(V)$ [For the visited[] array, and the stack used in DFS, input space = $O(V+E)$]
 
-### *2. Finding Articulation Points * ###
+### *2. Finding Articulation Points* ###
 Finding *articulation points* (or *cut vertices*) in a graph using DFS can be effectively accomplished with **Tarjan’s algorithm**. An articulation point is a vertex that, when removed, increases the number of connected components in the graph.
 
 #### Algorithm ####
 - Perform DFS and maintain the discovery times and low values for each vertex
 - For each vertex, check if it is an articulation point based on the following conditions:
-        - If the root of the DFS tree has two or more children
-        - If any other vertex v has a child u such that no vertex reachable from u can connect back to one of v's ancestors
+  - If the root of the DFS tree has two or more children
+  - If any other vertex v has a child u such that no vertex reachable from u can connect back to one of v's ancestors
 
 
