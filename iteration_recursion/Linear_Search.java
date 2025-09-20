@@ -21,14 +21,14 @@ public class Linear_Search {
        
        int id = Search_Iterative(A, key, 0);
        if (id == -1)
-           System.out.println("Element " + key + " not found in the array!");
+           System.out.println("(Iterative) Element " + key + " not found in the array!");
        else
-           System.out.println("Element " + key + " found at index: " + id);
+           System.out.println("(Iterative) Element " + key + " found at index: " + id);
         
        int idx = Search_Recursive(A, key, 0);
        if (idx == -1)
-           System.out.println("Element " + key + " not found in the array!");
+           System.out.println("(Recursive) Element " + key + " not found in the array!");
        else
-           System.out.println("Element " + key + " found at index: " + idx);
+           System.out.println("(Recursive) Element " + key + " found at index: " + idx);
    }
 }
