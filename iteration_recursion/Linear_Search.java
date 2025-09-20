@@ -7,7 +7,13 @@ public class Linear_Search {
        return -1;
    }
 
-    
+   public static int Search_Recursive(int[] A, int key, int idx) {
+        if (idx > A.length-1)
+            return -1;
+        if (A[idx] == key)
+            return idx;
+        return Search_Recursive(A, key, idx + 1);
+    }     
 
    public static void main(String[] args) {
        int[] A = {6, 2, 4, 5, 1, 3};
