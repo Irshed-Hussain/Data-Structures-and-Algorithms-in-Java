@@ -1,4 +1,5 @@
 public class Linear_Search {
+    
     public static int Search_Iterative(int[] A, int key, int idx) {
        for(int i=0; i<A.length-1; i++) {
             if(A[i] == key)
