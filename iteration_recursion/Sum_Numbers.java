@@ -1,16 +1,14 @@
 public class Sum_Numbers {
     public static int Sum_Iterative(int n) {
         int sum = 0;
-        for (int i = 1; i <= n; i++) {
+        for (int i=1; i<=n; i++)
             sum += i;  
-        }
         return sum;
     }
 
     public static int Sum_Recursive(int n) {
-        if (n == 0) {
+        if (n == 0) 
             return 0;  
-        }
         return n + Sum_Recursive(n - 1);  
     }
 
