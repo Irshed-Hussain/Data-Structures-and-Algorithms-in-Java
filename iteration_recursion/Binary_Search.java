@@ -1,4 +1,5 @@
 public class Binary_Search {
+    
     public static int Search_Iterative(int[] A, int key, int p, int r) {
         while (p <= r) {
             int mid = (p+r) / 2; 
