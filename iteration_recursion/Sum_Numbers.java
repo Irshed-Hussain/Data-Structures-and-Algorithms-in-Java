@@ -14,7 +14,7 @@ public class Sum_Numbers {
 
     public static void main(String[] args) {
         int n = 5; 
-        System.out.println("Sum of first " + n + " numbers: " + Sum_Iterative(n));
-        System.out.println("Sum of first " + n + " numbers: " + Sum_Recursive(n));
+        System.out.println("(Iterative) Sum of first " + n + " numbers: " + Sum_Iterative(n));
+        System.out.println("(Recursive) Sum of first " + n + " numbers: " + Sum_Recursive(n));
     }
 }
