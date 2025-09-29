@@ -34,7 +34,7 @@ public void bfs(int s) {
 
 ### Applications of BFS ###
 ### *1. Checking bipartiteness of a graph G=(V, E)* ###
-To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BFS algorithm where we try to color the graph $G$ using two colors such that no two adjacent nodes share the same color. A graph is **bipartite** if we can split its vertices into two sets such that no edge connects nodes of the same set. 
+To check whether a given graph G=(V, E) is **bipartite** or not, we can use BFS algorithm, where we try to color the graph G using two colors such that no two adjacent nodes share the same color. A graph is **bipartite** if we can split its vertices into two sets such that no edge connects nodes of the same set. 
 
 #### Properties of a bipartite graph ####
 - A graph is **bipartite** if and only if it is **2-colorable**
@@ -50,24 +50,24 @@ To check whether a given graph $G=(V, E)$ is **bipartite** or not, we can use BF
 - If no conflict is found, he graph is *bipartite*
 
 #### Complexity ####
-- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the color[] array, and the queue used in BFS, input space (adjacency list) = $O(V+E)$]
+- Time Complexity = O(V+E) [For visiting each nodes, and edge once]
+- Space Complexity = O(V) [For the color[] array, and the queue used in BFS, input space (adjacency list) = O(V+E)]
 
 
 ### *2. Finding number of connected components for a graph G=(V, E)* ###
-The number of connected components can be computed from an undirected graph using BFS algorithm. A connected component in a graph G=(V, E) is a maximal set of vertices such that every pair of vertices in the set is connected by a path.
+The number of connected components can be computed from an undirected graph using BFS algorithm. A connected component in a graph G is a maximal set of vertices such that every pair of vertices in the set is connected by a path.
 
 #### Algorithm ####
 - Initialize a *visited[]* array for all the nodes and set all to false
-- For each *unvisited* node $u$:
-  - Start a BFS from $u$
+- For each *unvisited* node u:
+  - Start a BFS from u
   - Mark all reachable nodes as *visited*
   - Collect the *visited* nodes into a component list
 - Repeat until all nodes are *visited*.
 
 #### Complexity ####
-- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the visited[] array, and the queue used in BFS, input space (adjacency list) = $O(V+E)$]
+- Time Complexity = O(V+E) [For visiting each nodes, and edge once]
+- Space Complexity = O(V) [For the visited[] array, and the queue used in BFS, input space (adjacency list) = O(V+E)]
 
 
 
@@ -93,7 +93,7 @@ public void dfs(int s) {
 
 ### Applications of DFS ###
 ### *1. Finding Topological Order / Topological Sort* ###
-In a DAG, a topological order or topological sort is a sequence of all the vertices such that for every edge $u \rightarrow v$, $u$ appears before $v$ in the sequence. It is a linear ordering of vertices such that for every directed edge $u \rightarrow v$, vertex $u$ comes before vertex $v$ in the ordering. Applications of topological order includes task scheduling / dependency graph (find a valid execution order respecting dependencies), checking cycles in a graph (since we can only find topological ordering on a DAG, if topological order not possible, then there exist cycle in a directed graph).
+In a DAG, a topological order or topological sort is a sequence of all the vertices such that for every edge u -> v, u appears before v in the sequence. It is a linear ordering of vertices such that for every directed edge u -> v, vertex u comes before vertex v in the ordering. Applications of topological order includes task scheduling / dependency graph (find a valid execution order respecting dependencies), checking cycles in a graph (since we can only find topological ordering on a DAG, if topological order not possible, then there exist cycle in a directed graph).
 
 #### Algorithm ####
 - Maintain a *visited[]* array to track visited nodes
@@ -102,8 +102,8 @@ In a DAG, a topological order or topological sort is a sequence of all the verti
 - After all DFS calls are complete, *pop* from the *stack* to get the topological order
 
 #### Complexity ####
-- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the visited[] array, and the stack used in DFS, input space (adjacency list) = $O(V+E)$]
+- Time Complexity = O(V+E) [For visiting each nodes, and edge once]
+- Space Complexity = O(V) [For the visited[] array, and the stack used in DFS, input space (adjacency list) = O(V+E)]
 
 ### *2. Finding Articulation Points* ###
 Finding *articulation points* (or *cut vertices*) in an undirected graph using DFS can be find out using **Tarjan’s algorithm**. An articulation point is a vertex that, when removed, increases the number of connected components in the graph. Applications of finding articulation point includes transportation (identifying critical road junctions), social network analysis (community bridging users).
@@ -115,18 +115,18 @@ Finding *articulation points* (or *cut vertices*) in an undirected graph using D
   - If any other vertex v has a child u such that no vertex reachable from u can connect back to one of v's ancestors
 
 #### Complexity ####
-- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the arrays, and the stack used in DFS, input space (adjacency list) = $O(V+E)$]
+- Time Complexity = O(V+E) [For visiting each nodes, and edge once]
+- Space Complexity = O(V) [For the arrays, and the stack used in DFS, input space (adjacency list) = O(V+E)]
 
 ### *3. Finding Strongly Connected Components* ###
 A **Strongly Connected Component (SCC)** in a directed graph is a maximal subset of vertices such that *every vertex is reachable from every other vertex in the subset*. Kosaraju's algorithm can be used to find the SCC from a directed graph G. In undirected graphs, the equivalent idea is finding the connected components. However, in directed graphs, connectivity is stricter (must be two-way reachable), so we find out SCC. The applications of SCC includes social network analysis, reducing a graph into a DAG, making further analysis easier.
 
 #### Algorithm ####
 - Run DFS on graph G to compute the finishing times of each vertex and store the vertices in a stack
-- Transpose the graph G to $G^T$ (reverse the direction of all edges)
-- Run DFS again on graph $G^T$ in the order defined by the stack
+- Transpose the graph G to G' (reverse the direction of all edges)
+- Run DFS again on graph G' in the order defined by the stack
 - Each DFS tree in the step-3 is a strongly connected component
 
 #### Complexity ####
-- Time Complexity = $O(V+E)$ [For visiting each nodes, and edge once]
-- Space Complexity = $O(V)$ [For the arrays, and the stack used in DFS, input space (adjacency list) = $O(V+E)$]
+- Time Complexity = O(V+E) [For visiting each nodes, and edge once]
+- Space Complexity = O(V) [For the arrays, and the stack used in DFS, input space (adjacency list) = O(V+E)]
